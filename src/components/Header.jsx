@@ -4,7 +4,7 @@ function Header() {
     return (
         <div className='grid-section'>
             <div className='header-left'>
-                <img className='react-logo' src='./src/assets/react.svg' alt='React Logo' />
+                <img className='react-logo' src={'./src/assets/react.svg'} alt='React Logo' />
             </div>
 
             <div>
