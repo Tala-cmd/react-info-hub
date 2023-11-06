@@ -81,7 +81,7 @@ cursor: pointer;
   align-items: center;
   }
 
-.grid-section{
+  .grid-section{
   grid-template-columns: 150px 1fr ;
   }
 
@@ -90,10 +90,6 @@ cursor: pointer;
   }
 
   .button, .button-clicked{
-  font-size: 25px;
-  }
-  
-  .body-content{
   font-size: 25px;
   }
 }
