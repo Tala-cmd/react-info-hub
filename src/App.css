@@ -50,19 +50,6 @@ grid-template-columns: 1fr 1fr 1fr;
 column-gap:15px;
 }
 
-.buttons button{
-font-family:monospace;
-background-color: rgb(219, 219, 223);
-border: none;
-border-radius: 5px 5px 0 0;
-cursor: pointer;
-}
-
-.buttons button:hover{
-background-color: rgb(190, 190, 193);
-transition: background-color 0.5s;
-}
-
 .body-content{
 background-color: rgb(31, 32, 32);
 padding:20px;
@@ -71,6 +58,42 @@ font-size: 15px;
 border-radius: 0 0 10px 10px;
 }
 
-.buttons button:focus{
-  background-color:rgb(0,216,255);
+.button{
+font-family:monospace;
+background-color: rgb(219, 219, 223);
+border: none;
+border-radius: 5px 5px 0 0;
+cursor: pointer;
+}
+
+.button-clicked{
+font-family:monospace;
+background-color:rgb(0,216,255);
+border: none;
+border-radius: 5px 5px 0 0;
+cursor: pointer;
+}
+
+@media only screen and (min-width: 768px){
+  body{
+  display:flex;
+  justify-content: center;
+  align-items: center;
   }
+
+.grid-section{
+  grid-template-columns: 150px 1fr ;
+  }
+
+  .buttons{
+  column-gap:30px;
+  }
+
+  .button, .button-clicked{
+  font-size: 25px;
+  }
+  
+  .body-content{
+  font-size: 25px;
+  }
+}

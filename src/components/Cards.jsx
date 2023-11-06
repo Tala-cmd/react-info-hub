@@ -5,32 +5,27 @@ import Content3 from './Content3'
 
 function Cards() {
     const [show, setShow] = useState(null);
+    const [buttonStyles, setButtonStyles] = useState(['button', 'button', 'button'])
     
-    
-    function handleButton1(){
-        setShow(1);
-    }
-
-    function handleButton2(){
-        setShow(2)
-    }
-
-    function handleButton3(){
-        setShow(3)
+    function handleButton(index){
+        setShow(index);
+        const updatedStyles = buttonStyles.map((i) => (i === index ? 'button-clicked' : 'button'));
+        updatedStyles[index] = 'button-clicked';
+        setButtonStyles(updatedStyles);
     }
 
     return (
     <div className='cards'>
         <div className='buttons'>
-            <button onClick={handleButton1}>Why React?</button>
-            <button onClick={handleButton2}>Core Features</button>
-            <button onClick={handleButton3}>Related Resources</button>
+            <button className={buttonStyles[0]} onClick={() => handleButton(0)}>Why React?</button>
+            <button className={buttonStyles[1]} onClick={() => handleButton(1)}>Core Features</button>
+            <button className={buttonStyles[2]} onClick={() => handleButton(2)}>Related Resources</button>
         </div>
 
         <div className='body-content'>
-        {show === 1 && <Content1 />}
-        {show === 2 && <Content2 />}
-        {show === 3 && <Content3 />}
+        {show === 0 && <Content1 />}
+        {show === 1 && <Content2 />}
+        {show === 2 && <Content3 />}
         </div>
     </div>
     )
